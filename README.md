@@ -1,4 +1,4 @@
-# jimothy
+# jimothyz
 
 > Twitch streamer website in development
 
