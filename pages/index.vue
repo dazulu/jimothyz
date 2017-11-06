@@ -2,19 +2,19 @@
   <section class="container">
     <div>
       <logo/>
-      <h2 class="subtitle">
-        Twitch streamer website
-      </h2>
+      <stream-status />
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import StreamStatus from '~/components/atoms/StreamStatus.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    StreamStatus
   }
 }
 </script>
