@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vuex from 'vuex'
 import axios from 'axios'
 
@@ -29,7 +30,7 @@ const createStore = () => {
       async nuxtServerInit ({commit}, {req}) {
         const streamResponse = await axios.get(`${API_URL}/${ENDPOINT_STREAM}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`)
 
-        if (typeof streamResponse.data.stream === 'object') {
+        if (streamResponse.data.stream) {
           const { viewers } = streamResponse.data.stream
           const { status, game, partner, views, followers } = streamResponse.data.stream.channel
 
