@@ -1,5 +1,8 @@
 <template>
   <div>
+
+
+    <img v-if="gameArt && online" :src="gameArt" class="stream-gameart" />
     <div v-if="online" class="stream-status">
       <span class="status status--online" />
       <span class="status-mode">Live: </span> {{game}}
@@ -19,7 +22,8 @@
     computed: {
       online () { return this.$store.state.channel.online },
       game () { return this.$store.state.channel.game },
-      viewers () { return this.$store.state.channel.viewers }
+      viewers () { return this.$store.state.channel.viewers },
+      gameArt () { return this.$store.state.channel.gameArt }
     }
   }
 </script>
@@ -63,5 +67,12 @@
   .stream-viewers {
     font-weight: 600;
     color: #ff69b4;
+  }
+
+  .stream-gameart {
+    width: 160px;
+    border-radius: 5px;
+    transform: rotateZ(0deg);
+    margin-bottom: 10px;
   }
 </style>
