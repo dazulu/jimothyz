@@ -40,6 +40,7 @@ const createStore = () => {
           const streamData = streamResponse.data.stream
           const channelData = streamResponse.data.stream.channel
           payload = {
+            online: true,
             viewers: streamData.viewers,
             game: streamData.game,
             status: channelData.status,
