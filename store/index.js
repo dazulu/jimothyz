@@ -16,62 +16,58 @@ const createStore = () => {
         online: false,
         status: '',
         game: '',
-        gameArt: '',
+        boxArt: '~/images/default-boxart.jpg',
         views: 0,
         viewers: 0,
         followers: 0,
-        partner: false
+        partner: false,
+        url: `https://www.twitch.tv/${CHANNEL_NAME}`
       }
     },
     mutations: {
-      SET_STREAM_DATA (state, data) {
+      SET_CHANNEL_DATA (state, data) {
         state.channel = data
       }
     },
     actions: {
       async nuxtServerInit ({commit}, {req}) {
-        // Get response on stream state
+
+        let payload = {}
+
         const streamResponse = await axios.get(`${API_URL}/${ENDPOINT_STREAM}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`)
-
-        // If streamer is live, get stream data and place into store
+        
         if (streamResponse.data.stream) {
-          const { viewers } = streamResponse.data.stream
-          const { status, game, partner, views, followers } = streamResponse.data.stream.channel
-
-          // Get game box art
-          let gameArt = ''
-          if (game) {
-            const gameResponse = await axios.get(`${API_URL}/${ENDPOINT_GAMES}?query=${encodeURIComponent(game)}&type=suggest&client_id=${CLIENT_ID}`)
-            if (gameResponse.data.games && gameResponse.data.games[0].box && gameResponse.data.games[0].box.large) {
-              gameArt = gameResponse.data.games[0].box.large
-            }
+          const streamData = streamResponse.data.stream
+          const channelData = streamResponse.data.stream.channel
+          payload = {
+            viewers: streamData.viewers,
+            game: streamData.game,
+            status: channelData.status,
+            partner: channelData.partner,
+            views: channelData.views,
+            followers: channelData.url,
+            url: channelData.url
           }
-
-          commit('SET_STREAM_DATA', {
-            online: true,
-            viewers,
-            status,
-            game,
-            gameArt,
-            partner,
-            views,
-            followers
-          })
-        } else { // get channel data instead of stream data
-          const channelsResponse = await axios.get(`${API_URL}/${ENDPOINT_CHANNEL}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`)
-          const { status, game, partner, views, followers } = channelsResponse.data
-
-          commit('SET_STREAM_DATA', {
-            online: false,
-            viewers: 0,
-            gameArt: '',
-            status,
-            game,
-            partner,
-            views,
-            followers
-          })
+        } else {
+          const channelResponse = await axios.get(`${API_URL}/${ENDPOINT_CHANNEL}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`)
+          payload = {
+            status: channelResponse.data.status,
+            game: channelResponse.data.game,
+            partner: channelResponse.data.partner,
+            views: channelResponse.data.views,
+            followers: channelResponse.data.followers,
+            url: channelResponse.data.url
+          }
         }
+
+        if (payload.game) {
+          const gameResponse = await axios.get(`${API_URL}/${ENDPOINT_GAMES}?query=${encodeURIComponent(payload.game)}&type=suggest&client_id=${CLIENT_ID}`)
+          if (gameResponse.data.games && gameResponse.data.games[0].box && gameResponse.data.games[0].box.large) {
+            payload.boxArt = gameResponse.data.games[0].box.large
+          }
+        }
+
+        commit('SET_CHANNEL_DATA', { ...payload })
       }
     }
   })
