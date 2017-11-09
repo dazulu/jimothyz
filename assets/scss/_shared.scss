@@ -2,3 +2,40 @@ body {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
 }
+
+.content-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.angled-border {
+  position: absolute;
+  top: 0;
+  left :0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 120vw;
+    background: #fff;
+    height: 200px;
+    left: -1vw;
+    opacity: 1;
+    z-index: 0;
+  }
+
+  &::before {
+    transform: rotateZ(3deg);
+    top: -140px;
+  }
+
+  &::after {
+    transform: rotateZ(-3deg);
+    bottom: -140px;
+  }
+}
