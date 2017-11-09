@@ -1,19 +1,14 @@
 <template>
-  <div>
-
-
-    <img v-if="gameArt && online" :src="gameArt" class="stream-gameart" />
+  <div class="stream-status__wrapper">
     <div v-if="online" class="stream-status">
       <span class="status status--online" />
-      <span class="status-mode">Live: </span> {{game}}
+      <span class="stream-status__text">LIVE</span>with {{viewers}} viewers
     </div>
 
     <div v-else class="stream-status">
       <span class="status status--offline" />
-      <span class="status-mode">OFFLINE: </span> {{game}}
+      Stream Offline
     </div>
-
-    <span v-if="viewers" class="stream-viewers">Viewers: {{viewers}}</span>
   </div>
 </template>
 
@@ -21,58 +16,49 @@
   export default {
     computed: {
       online () { return this.$store.state.channel.online },
-      game () { return this.$store.state.channel.game },
-      viewers () { return this.$store.state.channel.viewers },
-      gameArt () { return this.$store.state.channel.gameArt }
+      viewers () { return this.$store.state.channel.viewers }
     }
   }
 </script>
 
 <style lang="scss">
+  .stream-status__wrapper {
+    position: relative;
+  }
+
   .stream-status {
+    background-color: #421b39;
+    background-size: 23px;
     color: #fff;
-    font-weight: 600;
-    font-size: 16px;
-    background: #421b39;
-    border-radius: 5px;
-    padding: 6px 12px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 12px 20px 12px 20px;
+    line-height: 1;
+    border-radius: 8px;
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    box-shadow: 4px 4px 0px 0px #9a4f7f;
-    margin-bottom: 10px;
+    box-shadow: 5px 5px 0px 0px hotpink;
+  }
+
+  .stream-status__text {
+    color: #ff69b4;
+    margin-right: 7px;
   }
 
   .status {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    margin-right: 5px;
-  }
-
-  .status-mode {
-    color: #ff69b4;
-    margin-right: 4px;
+    margin-right: 10px;
   }
 
   .status--offline {
-    background-color: firebrick;
+    background-color: #777;
   }
 
   .status--online {
     background-color: #79d879;
-  }
-
-  .stream-viewers {
-    font-weight: 600;
-    color: #ff69b4;
-  }
-
-  .stream-gameart {
-    width: 160px;
-    border-radius: 5px;
-    transform: rotateZ(0deg);
-    margin-bottom: 10px;
   }
 </style>
