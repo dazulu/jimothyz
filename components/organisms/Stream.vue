@@ -6,7 +6,7 @@
 
         <div class="status">
           <div>
-            <p class="text-status">[UK] Resident Evil F I N A L E | Jill - Labs [First Play]</p>
+            <p class="text-status">{{status}}</p>
             <p class="game">{{game}}</p>
             <div class="viewers">
               <img class="icon icon-followers" src="/images/heart.svg" role="presentation" />
@@ -25,7 +25,7 @@
       </div>
 
       <div v-if="online" class="live-status is-online">LIVE &#9656;</div>
-      <div v-else class="live-status is-offline">OFFLINE</div>
+      <div v-else class="live-status is-offline">OFFLINE &#9656;</div>
     </a>
   </div>
 </template>
@@ -75,7 +75,7 @@
   }
 
   .text-status {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
   }
@@ -128,9 +128,11 @@
   @keyframes hover {
     from {
       transform: rotateY(-15deg) translateY(-3px);
+        box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.25);
     }
     to {
       transform: rotateY(-10deg) translateY(3px);
+        box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.4);
     }
   }
 
@@ -152,11 +154,12 @@
     }
 
     .text-status {
+      font-size: 30px;
       margin-bottom: 0;
     }
 
     .live-status {
-      font-size: 38px;
+      font-size: 42px;
       height: auto;
     }
 
@@ -170,7 +173,7 @@
         width: 200px;
         box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.25);
         transform: rotateY(-15deg) translateY(-3px);
-        animation: hover 2s alternate infinite ease-in-out;
+        animation: hover 1.5s alternate infinite ease-in-out;
         animation-fill-mode: forwards
       }
     }
