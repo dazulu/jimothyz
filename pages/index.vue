@@ -8,7 +8,6 @@
 
 <script>
 import Stream from '~/components/organisms/Stream.vue'
-// import StreamStatus from '~/components/atoms/StreamStatus.vue'
 
 export default {
   components: {

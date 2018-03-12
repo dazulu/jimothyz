@@ -55,12 +55,14 @@ module.exports = {
   */
   build: {
     vendor: [],
-    postcss: [require("autoprefixer")()],
+    postcss: [
+      require('postcss-cssnext')()
+    ],
     /*
     ** Run ESLINT on save
     */
     extend(config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: "pre",
           test: /\.(js|vue)$/,
