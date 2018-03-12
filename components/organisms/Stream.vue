@@ -160,7 +160,8 @@
 
     .text-status {
       font-size: 30px;
-      margin-bottom: 0;
+      line-height: 30px;
+      margin-bottom: 4px;
     }
 
     .live-status {
