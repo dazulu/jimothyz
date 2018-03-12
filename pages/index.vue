@@ -1,8 +1,12 @@
 <template>
   <section class="container">
-    <div>
+    <div class="hero"></div>
+
+    <div class="section">
+      <div class="angle"></div>
       <stream />
     </div>
+
   </section>
 </template>
 
@@ -18,6 +22,27 @@ export default {
 
 <style>
 .container {
-  min-height: 100vh;
+  height: 100%;
+}
+
+.hero {
+  height: 100%;
+  background: salmon;
+}
+
+.section {
+  position: relative;
+}
+
+.angle {
+  top: -100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  min-height: 340px;
+  transform: skewY(5deg);
+  background: #fff;
 }
 </style>

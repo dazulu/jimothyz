@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrapper">
+  <div class="restrict content-wrapper">
     <a :href="url" rel="noopener" target="_blank" class="stream__wrapper">
       <div class="twitch"></div>
       <div class="stream">
@@ -127,16 +127,21 @@
 
   @keyframes hover {
     from {
-      transform: rotateY(-15deg) translateY(-3px);
+      transform: rotateY(-15deg) translateY(-3px) rotateX(10deg);
         box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.25);
     }
     to {
-      transform: rotateY(-10deg) translateY(3px);
+      transform: rotateY(-10deg) translateY(3px) rotateX(10deg);
         box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.4);
     }
   }
 
   @media screen and (min-width: 1024px) {
+    .content-wrapper {
+      position: relative;
+      top: -175px;
+    }
+
     .stream__wrapper {
       display: flex;
       position: relative;
@@ -172,7 +177,7 @@
       img {
         width: 200px;
         box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.25);
-        transform: rotateY(-15deg) translateY(-3px);
+        transform: rotateY(-15deg) translateY(-3px) rotateX(10deg);
         animation: hover 1.5s alternate infinite ease-in-out;
         animation-fill-mode: forwards
       }
