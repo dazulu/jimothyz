@@ -46,7 +46,7 @@ const createStore = () => {
             status: channelData.status,
             partner: channelData.partner,
             views: channelData.views,
-            followers: channelData.url,
+            followers: channelData.followers,
             url: channelData.url
           }
         } else {
