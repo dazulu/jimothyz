@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div class="hero"></div>
+    <banner />
 
     <div class="section">
       <div class="angle"></div>
@@ -11,38 +11,35 @@
 </template>
 
 <script>
-import Stream from '~/components/organisms/Stream.vue'
+  import Banner from '~/components/organisms/Banner.vue'
+  import Stream from '~/components/organisms/Stream.vue'
 
-export default {
-  components: {
-    Stream
+  export default {
+    components: {
+      Banner,
+      Stream
+    }
   }
-}
 </script>
 
-<style>
-.container {
-  height: 100%;
-}
+<style lang="scss" scoped>
+  .container {
+    height: 100%;
+  }
 
-.hero {
-  height: 100%;
-  background: salmon;
-}
+  .section {
+    position: relative;
+  }
 
-.section {
-  position: relative;
-}
-
-.angle {
-  top: -100px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 60%;
-  min-height: 340px;
-  transform: skewY(5deg);
-  background: #fff;
-}
+  .angle {
+    top: -100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60%;
+    min-height: 340px;
+    transform: skewY(5deg);
+    background: #fff;
+  }
 </style>

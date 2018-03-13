@@ -25,7 +25,7 @@
       </div>
 
       <div v-if="online" class="live-status is-online">LIVE &#9656;</div>
-      <div v-else class="live-status is-offline">OFFLINE &#9656;</div>
+      <div v-else class="live-status is-offline">OFFLINE</div>
     </a>
   </div>
 </template>
@@ -49,6 +49,7 @@
     background: #222;
     display: block;
     text-decoration: none;
+    z-index: 1;
   }
 
   .status {
