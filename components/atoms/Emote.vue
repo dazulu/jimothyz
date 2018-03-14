@@ -1,9 +1,9 @@
 <template>
-  <img class="dog" src="~/static/images/jimCool.png" alt="Jimothyz" />
+  <img class="emote" src="~/static/images/jimCool.png" alt="Jimothyz" role="presentation" />
 </template>
 
 <style lang="scss">
-  .dog {
+  .emote {
     display: inline-block;
     padding-right: 10px;
     height: 70%;

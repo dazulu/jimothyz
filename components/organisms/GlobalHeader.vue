@@ -1,19 +1,19 @@
 <template>
   <div class="header__wrapper">
     <div class="header">
-      <Logo />
-      <Navigation />
+      <emote />
+      <navigation />
     </div>
   </div>
 </template>
 
 <script>
-  import Logo from '~/components/atoms/Logo.vue'
+  import Emote from '~/components/atoms/Emote.vue'
   import Navigation from '~/components/molecules/Navigation.vue'
   
   export default {
     components: {
-      Logo,
+      Emote,
       Navigation
     }
   }
@@ -28,7 +28,6 @@
     transition: all 300ms ease;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 $padding;
   }
 
   .header__sub {

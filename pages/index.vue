@@ -3,19 +3,15 @@
     <banner />
 
     <div>
-      <div class="section section--white angle--top angle--bottom">
+      <div class="section section--white angle--bottom angle--top">
         <div class="contain">
           <stream />
         </div>
       </div>
 
-      <div class="section section--blue angle--bottom">
-        <div class="contain">
-          fdsffsde
-        </div>
+      <div class="section section--keyboard" >
       </div>
     </div>
-
   </section>
 </template>
 

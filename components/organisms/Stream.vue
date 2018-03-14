@@ -17,7 +17,7 @@
         <p class="viewers">
           <img class="icon icon-followers" src="/images/heart.svg" role="presentation" />
           {{followers}}
-          <span v-if="!online">
+          <span v-if="online">
             <img class="icon icon-viewers" src="/images/viewers.svg" role="presentation" />
             {{viewers}}
           </span>
@@ -67,7 +67,7 @@
   }
 
   .twitch-logo {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     width: 100px;
   }
 
@@ -123,7 +123,7 @@
 
   .button-wrapper {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
   }
 
   @keyframes hover {
@@ -169,6 +169,8 @@
 
     .button-wrapper {
       text-align: left;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
