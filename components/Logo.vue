@@ -3,7 +3,7 @@
 </template>
 
 <style>
-.logo {
-  width: 240px;
-}
+  .logo {
+    width: 240px;
+  }
 </style>

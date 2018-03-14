@@ -1,32 +1,43 @@
 <template>
-  <div class="restrict content-wrapper">
-    <a :href="url" rel="noopener" target="_blank" class="stream__wrapper">
-      <div class="twitch"></div>
-      <div class="stream">
+  <div>
+    <div class="stream__wrapper">
+      <div>
+        <a :href=url rel=noopener>
+          <img src="~/static/images/twitch-logo.svg" alt="Twitch logo" class="twitch-logo" />
+        </a>
+        
+        <a :href=url class="status" rel=noopener>{{status}}</a>
 
-        <div class="status">
-          <div>
-            <p class="text-status">{{status}}</p>
-            <p class="game">{{game}}</p>
-            <div class="viewers">
-              <img class="icon icon-followers" src="/images/heart.svg" role="presentation" />
-              {{followers}}
-              <span v-if="online">
-                <img class="icon icon-viewers" src="/images/group.svg" role="presentation" />
-                {{viewers}}
-              </span>
-            </div>
-          </div>
-        </div>
+        <p class="game">
+          <span v-if="online">Playing: </span>
+          <span v-else>Last Playing: </span>
+          {{game}}
+        </p>
 
+        <p class="viewers">
+          <img class="icon icon-followers" src="/images/heart.svg" role="presentation" />
+          {{followers}}
+          <span v-if="!online">
+            <img class="icon icon-viewers" src="/images/viewers.svg" role="presentation" />
+            {{viewers}}
+          </span>
+        </p>
+
+      </div>
+      <div class="box-art-container">
         <div class="box-art">
-          <img :src="boxArt" :alt="'Box art for ' + game" />
+          <a :href=url rel=noopener>
+            <img :src="boxArt" :alt="'Box art for ' + game" />
+            </a>
         </div>
       </div>
+    </div>
 
-      <div v-if="online" class="live-status is-online">LIVE &#9656;</div>
-      <div v-else class="live-status is-offline">OFFLINE</div>
-    </a>
+    <div class="button-wrapper">
+      <a :href=url class="button" rel=noopener>
+        GO TO STREAM
+      </a>
+    </div>
   </div>
 </template>
 
@@ -44,52 +55,48 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .stream__wrapper {
-    background: #222;
-    display: block;
-    text-decoration: none;
-    z-index: 1;
+    > div:first-child {
+      margin-bottom: 30px;
+    }
+
+    > div {
+      text-align: center;
+    }
+  }
+
+  .twitch-logo {
+    margin-bottom: 15px;
+    width: 100px;
   }
 
   .status {
-    padding: 20px 10px;;
-  }
-
-  .twitch {
-    background-color: #6441A4;
-    background-image: url('/images/glitch.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 35px;
-    min-width: 150px;
-    height: 80px;
-  }
-
-  .stream {
-    color: #fff;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-  }
-
-  .text-status {
-    font-size: 30px;
-    font-weight: 700;
+    display: block;
+    font-family: $font-family-heading;
+    font-weight: 400;
+    color: #222;
+    font-size: 36px;
     margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  .game {
+    color: #222;
+    font-size: 26px;
+    margin-bottom: 15px;
   }
 
   .viewers {
-    font-size: 28px;
+    color: #222;
+    font-size: 26px;
   }
 
   .icon-viewers {
     position: relative;
-    top: 4px;
+    top: 3px;
     margin-left: 10px;
-    height: 30px;
+    height: 28px;
   }
 
   .icon-followers {
@@ -98,32 +105,25 @@
     height: 25px;
   }
 
-  .live-status {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700; 
-    min-width: 220px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .is-online {
-    background-color: #90BF4D;
-  }
-
-  .is-offline {
-    background-color: #999;
-  }
-
-  .game {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-
   .box-art {
-    display: none;
+    display: block;
+    perspective: 800px;
+    perspective-origin: 50% 50%;
+    position: relative;
+    margin-left: 5%;
+
+    img {
+      width: 240px;
+      box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.25);
+      transform: rotateY(-15deg) translateY(-3px) rotateX(10deg);
+      animation: hover 1.5s alternate infinite ease-in-out;
+      animation-fill-mode: forwards
+    }
+  }
+
+  .button-wrapper {
+    text-align: center;
+    margin-top: 50px;
   }
 
   @keyframes hover {
@@ -137,52 +137,53 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
-    .content-wrapper {
-      position: relative;
-      top: -175px;
-    }
-
+  @media screen and (min-width: 600px) {
     .stream__wrapper {
       display: flex;
-      position: relative;
-      height: 200px;
-      margin: 0 30px;
+      justify-content: space-between;
+
+      > div:first-child {
+        margin-bottom: 0;
+        flex: 5;
+      }
+
+      > div {
+        text-align: left;
+        flex: 5;
+      }
     }
 
     .status {
-      padding: 0;
+      font-size: 36px;
     }
 
-    .twitch {
-      background-size: 50px;
-      height: auto;
+    .twitch-logo {
+      width: 150px;
     }
 
-    .text-status {
-      font-size: 30px;
-      line-height: 30px;
-      margin-bottom: 4px;
+    .box-art-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .live-status {
-      font-size: 42px;
-      height: auto;
+    .button-wrapper {
+      text-align: left;
     }
+  }
 
+  @media screen and (min-width: 800px) {
     .box-art {
-      display: block;
-      perspective: 800px;
-      perspective-origin: 50% 50%;
-      margin-left: 5%;
-      
       img {
-        width: 200px;
-        box-shadow: 14px 0px 32px 0px rgba(0,0,0,0.25);
-        transform: rotateY(-15deg) translateY(-3px) rotateX(10deg);
-        animation: hover 1.5s alternate infinite ease-in-out;
-        animation-fill-mode: forwards
+        width: 300px;
+        margin-top: -50px;
       }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .status {
+      font-size: 44px;
     }
   }
 </style>

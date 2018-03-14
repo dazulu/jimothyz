@@ -11,14 +11,14 @@
     justify-content: center;
     padding: 0 30px;
     position: relative;
-    height: 90vh;
+    height: 60vh;
   }
 
   .logo {
     position: relative;
-    top: -130px;
-    max-width: 500px;
-    min-width: 320px;
-    width: 100%;
+    top: -20%;
+    max-width: 400px;
+    min-width: 290px;
+    width: 50vw;
   }
 </style>

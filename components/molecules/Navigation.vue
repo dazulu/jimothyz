@@ -4,6 +4,7 @@
       <ul class="nav">
         <li class="nav__item"><a v-on:click="toAbout" class="nav__link" href="#">About</a></li>
         <li class="nav__item"><a v-on:click="toFaq" class="nav__link" href="#">FAQ</a></li>
+        <li class="nav__item"><a v-on:click="toSchedule" class="nav__link" href="#">Schedule</a></li>
         <li class="nav__item"><a v-on:click="toContact" class="nav__link" href="#">Contact</a></li>
       </ul>
     </nav>
@@ -52,6 +53,9 @@
       },
       toFaq: () => {
         scroll('#faq', { ...jumpParams })
+      },
+      toSchedule: () => {
+        scroll('#schedule', { ...jumpParams })
       },
       toContact: () => {
         scroll('#contact', { ...jumpParams })
@@ -102,7 +106,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
+    font-family: $font-family-heading;
+    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
     height: 100%;

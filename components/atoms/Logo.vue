@@ -1,11 +1,11 @@
 <template>
-  <img class="logo" src="~/static/images/jimCool.png" alt="Jimothyz" />
+  <img class="dog" src="~/static/images/jimCool.png" alt="Jimothyz" />
 </template>
 
 <style lang="scss">
-  .logo {
+  .dog {
     display: inline-block;
     padding-right: 10px;
-    width: 80px;
+    height: 70%;
   }
 </style>

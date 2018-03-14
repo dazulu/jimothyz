@@ -2,9 +2,18 @@
   <section class="container">
     <banner />
 
-    <div class="section">
-      <div class="angle"></div>
-      <stream />
+    <div>
+      <div class="section section--white angle--top angle--bottom">
+        <div class="contain">
+          <stream />
+        </div>
+      </div>
+
+      <div class="section section--blue angle--bottom">
+        <div class="contain">
+          fdsffsde
+        </div>
+      </div>
     </div>
 
   </section>
@@ -22,24 +31,6 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .container {
-    height: 100%;
-  }
+<style lang="scss">
 
-  .section {
-    position: relative;
-  }
-
-  .angle {
-    top: -100px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 60%;
-    min-height: 340px;
-    transform: skewY(5deg);
-    background: #fff;
-  }
 </style>

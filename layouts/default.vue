@@ -17,7 +17,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   html {
     font-size: 16px;
     word-spacing: 1px;
@@ -38,9 +38,5 @@
   *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
-  }
-
-  .view {
-    height: 100%;
   }
 </style>

@@ -1,51 +1,118 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 body {
   font-family: $font-family;
-  height: 100%;
-
-  > div {
-    height: 100%;
-  }
 }
 
-#__layout {
-  height: 100%;
-}
+// body {
+//   // height: 100%;
 
-.restrict{
+//   > div {
+//     // height: 100%;
+//   }
+// }
+// #__layout,
+// .container,
+// .view {
+//   // height: 100%;
+// }
+
+.contain {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
-.angled-border {
-  position: absolute;
-  top: 0;
-  left :0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+.section {
+  position: relative;
+  padding: 30px;
 
-  &::before,
-  &::after {
+  &:not(:first-child) {
+    margin-top: 200px;
+  }
+}
+
+.section--white {
+  background-color: $pure-white;
+
+  &:before,
+  &:after {
+    background-color: inherit;
+  }
+}
+
+.section--blue {
+  background-color: #1aa6b7;
+
+  &:before,
+  &:after {
+    background-color: inherit;
+  }
+}
+
+.angle--top,
+.angle--bottom {
+  &:before,
+  &:after {
     content: '';
+    display: block;
     position: absolute;
-    width: 120vw;
-    background: red;
-    height: 200px;
-    left: -1vw;
-    opacity: 1;
+    left: 0;
+    right: 0;
+    height: 300px;
     z-index: 0;
   }
+}
 
-  &::before {
-    transform: rotateZ(3deg);
-    top: -140px;
+.angle--top {
+  &:before {
+    top: -100px;
+    transform: skewY(-3deg);
   }
+}
 
-  &::after {
-    transform: rotateZ(-3deg);
-    bottom: -140px;
+.angle--bottom {
+  &:after {
+    bottom: -100px;
+    transform: skewY(3deg);
+  }
+}
+
+.section__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 50px;
+
+  background-image: url('~/static/images/jimHi-trans.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80px;
+}
+
+.button {
+  box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.20);
+  background: linear-gradient(to left bottom, #355a88, #4ebad2);
+  border-radius: 12px;
+  display: inline-block;
+  padding: 15px 25px;
+
+  font-family: $font-family-heading;
+  font-size: 22px;
+  font-weight: 400;
+  color: $pure-white;
+  text-decoration: none;
+  transition: all 140ms ease-in;
+
+  &:hover {
+    filter: saturate(1.2);
+    box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.30);
   }
 }
