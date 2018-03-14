@@ -1,10 +1,8 @@
 <template>
-  <div class="header__wrapper">
     <div class="header">
       <emote />
       <navigation />
     </div>
-  </div>
 </template>
 
 <script>
@@ -28,6 +26,8 @@
     transition: all 300ms ease;
     max-width: 1200px;
     margin: 0 auto;
+    padding-left: $padding;
+    padding-right: $padding;
   }
 
   .header__sub {

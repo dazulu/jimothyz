@@ -1,22 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
 
 body {
   font-family: $font-family;
 }
-
-// body {
-//   // height: 100%;
-
-//   > div {
-//     // height: 100%;
-//   }
-// }
-// #__layout,
-// .container,
-// .view {
-//   // height: 100%;
-// }
 
 .contain {
   max-width: 1200px;
@@ -26,13 +13,15 @@ body {
   z-index: 1;
 }
 
+.copy {
+  font-size: 20px;
+  color: #222;
+  line-height: 1.5;
+}
+
 .section {
   position: relative;
   padding: 30px;
-
-  // &:not(:first-child) {
-  //   margin-top: 200px;
-  // }
 }
 
 .section--keyboard {
@@ -53,38 +42,28 @@ body {
   }
 }
 
-.section--blue {
-  background-color: #1aa6b7;
-
-  &:before,
-  &:after {
-    background-color: inherit;
-  }
-}
-
-
-.angle--top {
+.angle-top {
   &:before {
     content: '';
     display: block;
     position: absolute;
     left: 0;
     right: 0;
-    height: 300px;
+    height: 200px;
     z-index: 0;
     top: -100px;
     transform: skewY(-3deg);
   }
 }
 
-.angle--bottom {
+.angle-bottom {
   &:after {
     content: '';
     display: block;
     position: absolute;
     left: 0;
     right: 0;
-    height: 300px;
+    height: 200px;
     z-index: 0;
     bottom: -100px;
     transform: skewY(3deg);
@@ -96,15 +75,26 @@ body {
   align-items: center;
   justify-content: center;
   height: 80px;
+  margin-bottom: $padding * 2;
 
+  color: #111;
   font-family: $font-family-heading;
   font-weight: 400;
   font-size: 50px;
+  text-align: center;
 
   background-image: url('~/static/images/jimHi-trans.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 80px;
+}
+
+.image-banner {
+  background-image: url('~/static/images/gamer-keyboard.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 600px;
 }
 
 .button {
@@ -124,5 +114,35 @@ body {
   &:hover {
     filter: saturate(1.2);
     box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.30);
+  }
+}
+
+.two-column-content {
+  > div:first-child {
+    margin-bottom: $padding * 2;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-width: 900px) {
+  .two-column-content {
+    display: flex;
+
+    > div {
+      flex: 1;
+      display: flex;
+
+      &:first-child {
+        justify-content: right;
+        padding-right: 5%;
+      }
+
+      &:last-child {
+        justify-content: left;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
   }
 }
