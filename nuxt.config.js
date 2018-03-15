@@ -19,23 +19,23 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "jimothyz",
+    title: "Jimothy - Twitch Streamer",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Twitch streamer website"
+        content: "I'm a variety streamer -- meaning we play anything and everything -- but community always comes first."
       },
       { name: "google-site-verification", content: "tbd" },
-      { property: "og:title", content: "jimothyz" },
-      { property: "og:description", content: "Twitch streamer website" },
-      { property: "og:image", content: "tbd" },
+      { property: "og:title", content: "Jimothy - Twitch Streamer" },
+      { property: "og:description", content: "I'm a variety streamer -- meaning we play anything and everything -- but community always comes first." },
+      { property: "og:image", content: "~/static/images/og-image.jpg" },
       { property: "og:url", content: "tbd" },
       { property: "og:type", content: "website" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
   },
   /*
   ** Shared CSS rules
