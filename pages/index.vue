@@ -27,6 +27,7 @@
       </div>
 
       <global-footer />
+      <back-to-top />
   </section>
 </template>
 
@@ -38,6 +39,7 @@
   import Schedule from '~/components/organisms/Schedule.vue'
   import Faq from '~/components/organisms/Faq.vue'
   import GlobalFooter from '~/components/organisms/GlobalFooter.vue'
+  import BackToTop from '~/components/atoms/BackToTop.vue'
 
   export default {
     components: {
@@ -47,7 +49,8 @@
       About,
       Schedule,
       Faq,
-      GlobalFooter
+      GlobalFooter,
+      BackToTop
     }
   }
 </script>

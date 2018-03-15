@@ -33,13 +33,13 @@
   }
 
   
-  @media only screen and (min-width:1024px) {
+  @media only screen and (min-width: 1024px) {
     .pubg {
       background-image: url('~/static/images/pubg-medium.jpg');
     }
   }
 
-  @media only screen and (min-width:1280px) {
+  @media only screen and (min-width: 1280px) {
     .pubg {
       background-image: url('~/static/images/pubg-large.jpg');
     }
