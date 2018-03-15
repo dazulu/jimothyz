@@ -67,7 +67,7 @@
 <style lang="scss" scoped>
   .nav {
     background: rgba(0, 0, 0, 0.88);
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(#ba526c,1) 50%,rgba(#ba526c,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
     display: flex;
     justify-content: center;
