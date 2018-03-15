@@ -2,7 +2,6 @@
   <section class="container">
     <hero />
 
-    <div>
       <div class="section section--white angle-bottom angle-top">
         <div class="contain">
           <stream />
@@ -15,7 +14,7 @@
         <about />
       </div>
 
-      <image-banner image="game2" />
+      <image-banner image="pubg" />
 
       <div class="section section--blue angle-bottom angle-top">
         <faq />
@@ -23,11 +22,11 @@
 
       <image-banner image="corgi" />
 
-      <div class="section section--white angle-bottom angle-top">
+      <div class="section section--white angle-top">
         <schedule />
       </div>
-    </div>
-  
+
+      <global-footer />
   </section>
 </template>
 
@@ -38,6 +37,7 @@
   import About from '~/components/organisms/About.vue'
   import Schedule from '~/components/organisms/Schedule.vue'
   import Faq from '~/components/organisms/Faq.vue'
+  import GlobalFooter from '~/components/organisms/GlobalFooter.vue'
 
   export default {
     components: {
@@ -46,7 +46,8 @@
       ImageBanner,
       About,
       Schedule,
-      Faq
+      Faq,
+      GlobalFooter
     }
   }
 </script>

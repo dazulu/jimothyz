@@ -24,15 +24,24 @@
     background-image: url('~/static/images/bg-keyboard.jpg');
   }
 
-  .game1 {
-    background-image: url('~/static/images/bg-game1.jpg');
-  }
-
-  .game2 {
-    background-image: url('~/static/images/bg-game2.jpg');
-  }
-
   .corgi {
     background-image: url('~/static/images/bg-corgi.jpg');
+  }
+
+  .pubg {
+    background-image: url('~/static/images/pubg-small.jpg');
+  }
+
+  
+  @media only screen and (min-width:1024px) {
+    .pubg {
+      background-image: url('~/static/images/pubg-medium.jpg');
+    }
+  }
+
+  @media only screen and (min-width:1280px) {
+    .pubg {
+      background-image: url('~/static/images/pubg-large.jpg');
+    }
   }
 </style>
