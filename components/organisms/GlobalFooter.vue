@@ -39,7 +39,6 @@
     background-position: center center;
     background-size: cover;
     height: 800px;
-    border: 1px solid lime;
     position: relative;
 
     &:after {
