@@ -12,17 +12,7 @@ const ENDPOINT_GAMES = 'search/games'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      channel: {
-        online: false,
-        status: '',
-        game: '',
-        boxArt: '~/images/default-boxart.jpg',
-        views: 0,
-        viewers: 0,
-        followers: 0,
-        partner: false,
-        url: `https://www.twitch.tv/${CHANNEL_NAME}`
-      }
+      channel : {}
     },
     mutations: {
       SET_CHANNEL_DATA (state, data) {
@@ -31,33 +21,58 @@ const createStore = () => {
     },
     actions: {
       async nuxtServerInit ({commit}, {req}) {
-
         let payload = {}
 
-        const streamResponse = await axios.get(`${API_URL}/${ENDPOINT_STREAM}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`)
-        
-        if (streamResponse.data.stream) {
-          const streamData = streamResponse.data.stream
-          const channelData = streamResponse.data.stream.channel
+        const streamResponse = await axios.get(
+          `${API_URL}/${ENDPOINT_STREAM}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`
+        )
+        .then(response => { 
+          return response.data
+        })
+        .catch(error => {
+            console.log(error.response)
+        })
+
+        if (streamResponse && streamResponse.stream) {
+          const channelData = streamResponse.stream.channel
           payload = {
             online: true,
-            viewers: streamData.viewers,
-            game: streamData.game,
+            viewers: streamResponse.stream.viewers,
+            game: channelData.game,
             status: channelData.status,
             partner: channelData.partner,
             views: channelData.views,
             followers: channelData.followers,
-            url: channelData.url
+            url: channelData.url,
+            noConnection: false
           }
         } else {
-          const channelResponse = await axios.get(`${API_URL}/${ENDPOINT_CHANNEL}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`)
-          payload = {
-            status: channelResponse.data.status,
-            game: channelResponse.data.game,
-            partner: channelResponse.data.partner,
-            views: channelResponse.data.views,
-            followers: channelResponse.data.followers,
-            url: channelResponse.data.url
+          const channelResponse = await axios.get(
+            `${API_URL}/${ENDPOINT_CHANNEL}/${CHANNEL_NAME}?client_id=${CLIENT_ID}`
+          )
+          .then(response => { 
+            return response.data
+          })
+          .catch(error => {
+              console.log(error.response)
+          })
+
+          if (channelResponse) {
+            payload = {
+              status: channelResponse.status,
+              game: channelResponse.game,
+              partner: channelResponse.partner,
+              views: channelResponse.views,
+              followers: channelResponse.followers,
+              url: channelResponse.url,
+              noConnection: false
+            }
+          } else {
+            payload = {
+              boxArt: '/images/default-boxart.jpg',
+              noConnection: true,
+              url: `https://www.twitch.tv/${CHANNEL_NAME}`
+            }
           }
         }
 

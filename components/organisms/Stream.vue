@@ -6,29 +6,36 @@
           <img src="~/static/images/twitch-logo.svg" alt="Twitch logo" class="twitch-logo" />
         </a>
         
-        <a :href=url class="status" rel=noopener>{{status}}</a>
+        <div v-if="error">
+          <p class="copy">We're unable to connect to Twitch right now and find out what Jim is up to but that shouldn't stop you <a :href=url rel=noopener>taking a look</a> yourself :)</p>
+        </div>
+        <div v-else>
+          <a :href=url class="status" rel=noopener>{{status}}</a>
 
-        <p class="game">
-          <span v-if="online">Playing: </span>
-          <span v-else>Last Playing: </span>
-          {{game}}
-        </p>
+          <p v-if="game" class="game">
+            <span v-if="online">Playing: </span>
+            <span v-else>Last Playing: </span>
+            {{game}}
+          </p>
 
-        <p class="viewers">
-          <img class="icon icon-followers" src="/images/heart.svg" role="presentation" />
-          {{followers}}
-          <span v-if="online">
-            <img class="icon icon-viewers" src="/images/viewers.svg" role="presentation" />
-            {{viewers}}
-          </span>
-        </p>
+          <p class="viewers">
+            <img class="icon icon-followers" src="/images/heart.svg" />
+            {{followers}}
+            <img class="icon icon-views" src="/images/eye.svg" />
+            {{views}}
+            <span v-if="online">
+              <img class="icon icon-viewers" src="/images/viewers.svg" />
+              {{viewers}}
+            </span>
+          </p>
+        </div>
 
       </div>
       <div class="box-art-container">
         <div class="box-art">
           <a :href=url rel=noopener>
             <img :src="boxArt" :alt="'Box art for ' + game" />
-            </a>
+          </a>
         </div>
       </div>
     </div>
@@ -46,11 +53,13 @@
     computed: {
       game () { return this.$store.state.channel.game },
       online () { return this.$store.state.channel.online },
-      viewers () { return this.$store.state.channel.viewers },
-      followers () { return this.$store.state.channel.followers },
+      viewers () { return this.$store.state.channel.viewers.toLocaleString('en') },
+      views () { return this.$store.state.channel.views.toLocaleString('en') },
+      followers () { return this.$store.state.channel.followers.toLocaleString('en') },
       boxArt () { return this.$store.state.channel.boxArt },
       status () { return this.$store.state.channel.status },
-      url () { return this.$store.state.channel.url }
+      url () { return this.$store.state.channel.url },
+      error () { return this.$store.state.channel.noConnection }
     }
   }
 </script>
@@ -94,6 +103,13 @@
   }
 
   .icon-viewers {
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+    height: 28px;
+  }
+
+  .icon-views {
     position: relative;
     top: 3px;
     margin-left: 10px;
