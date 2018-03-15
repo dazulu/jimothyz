@@ -38,15 +38,29 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 600px;
+    height: 800px;
     border: 1px solid lime;
+    position: relative;
+
+    &:after {
+      background-color: $pure-white;
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 200px;
+      z-index: 0;
+      top: -100px;
+      transform: skewY(-3deg);
+    }
   }
 
   .footer-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70%;
+    height: 80%;
   }
 
   .title {
