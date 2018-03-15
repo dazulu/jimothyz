@@ -84,6 +84,7 @@
   .game {
     color: #222;
     font-size: 26px;
+    font-weight: 300;
     margin-bottom: 15px;
   }
 

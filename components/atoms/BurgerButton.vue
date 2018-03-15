@@ -82,10 +82,6 @@ export default {
     }
   }
 
-  .no-touchy-action {
-    touch-action: none;
-  }
-
   @media only screen and (min-width: 1024px) {
     .menu__button {
       display: none;

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300');
+
+.copy {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.section__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-bottom: $padding * 2;
+
+  color: $color-copy;
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+
+  background-image: url('~/static/images/jimHi-trans.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80px;
+}
+
+@media only screen and (min-width: 800px) {
+  .section__title {
+    font-size: 50px;
+  }
+}

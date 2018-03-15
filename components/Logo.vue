@@ -2,7 +2,7 @@
   <img class="logo" src="/images/logo.png" alt="Jimothy" />
 </template>
 
-<style>
+<style scoped>
   .logo {
     width: 240px;
   }

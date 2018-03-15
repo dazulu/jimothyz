@@ -1,148 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+html {
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  height: 100%;
+}
 
 body {
+  background-attachment: fixed;
+  background-image: url('~/images/dogs.png');
+  background-size: 200px;
   font-family: $font-family;
 }
 
-.contain {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.copy {
-  font-size: 20px;
-  color: #222;
-  line-height: 1.5;
-}
-
-.section {
-  position: relative;
-  padding: 30px;
-}
-
-.section--keyboard {
-  background-color: #fff;
-  background-image: url('~/static/images/gamer-keyboard.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
-  z-index: -1;
-}
-
-.section--white {
-  background-color: $pure-white;
-
-  &:before,
-  &:after {
-    background-color: inherit;
-  }
-}
-
-.angle-top {
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 200px;
-    z-index: 0;
-    top: -100px;
-    transform: skewY(-3deg);
-  }
-}
-
-.angle-bottom {
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 200px;
-    z-index: 0;
-    bottom: -100px;
-    transform: skewY(3deg);
-  }
-}
-
-.section__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  margin-bottom: $padding * 2;
-
-  color: #111;
-  font-family: $font-family-heading;
-  font-weight: 400;
-  font-size: 50px;
-  text-align: center;
-
-  background-image: url('~/static/images/jimHi-trans.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 80px;
-}
-
-.image-banner {
-  background-image: url('~/static/images/gamer-keyboard.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 600px;
-}
-
-.button {
-  box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.20);
-  background: linear-gradient(to left bottom, #355a88, #4ebad2);
-  border-radius: 12px;
-  display: inline-block;
-  padding: 15px 25px;
-
-  font-family: $font-family-heading;
-  font-size: 22px;
-  font-weight: 400;
-  color: $pure-white;
-  text-decoration: none;
-  transition: all 140ms ease-in;
-
-  &:hover {
-    filter: saturate(1.2);
-    box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.30);
-  }
-}
-
-.two-column-content {
-  > div:first-child {
-    margin-bottom: $padding * 2;
-    text-align: center;
-  }
-}
-
-
-@media only screen and (min-width: 900px) {
-  .two-column-content {
-    display: flex;
-
-    > div {
-      flex: 1;
-      display: flex;
-
-      &:first-child {
-        justify-content: right;
-        padding-right: 5%;
-      }
-
-      &:last-child {
-        justify-content: left;
-        padding-left: 5%;
-        padding-right: 5%;
-      }
-    }
-  }
+.no-touchy-action {
+  touch-action: none;
 }

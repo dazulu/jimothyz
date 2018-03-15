@@ -40,7 +40,13 @@ module.exports = {
   /*
   ** Shared CSS rules
   */
-  css: ["~/assets/scss/_shared.scss", "~/assets/scss/_variables.scss"],
+  css: [
+    "~/assets/scss/_shared.scss",
+    "~/assets/scss/_variables.scss",
+    "~/assets/scss/_typography.scss",
+    "~/assets/scss/_layout.scss",
+    "~/assets/scss/_buttons.scss"
+  ],
   /*
   ** Customize the progress-bar color
   */

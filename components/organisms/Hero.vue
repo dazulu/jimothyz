@@ -1,11 +1,11 @@
 <template>
-  <div class="banner">
+  <div class="hero">
     <img class="logo" src="~/static/images/logo.png" alt="Jimothyz" />
   </div>
 </template>
   
 <style lang="scss" scoped>
-  .banner {
+  .hero {
     display: flex;
     align-items: center;
     justify-content: center;

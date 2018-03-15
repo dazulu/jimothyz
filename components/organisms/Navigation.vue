@@ -122,20 +122,6 @@
     transition: all 1s ease;
   }
 
-  .social__icon {
-    fill: $pure-white;
-    height: 30px;
-    margin-right: 5px;
-  }
-
-  .youtube__icon {
-    height: 30px;
-  }
-
-  .patreon__icon {
-    height: 22px;
-  }
-
   @media (pointer: fine) and (min-width: 1024px){
     .nav__item {
       $colors-list: $dodger-blue $sunglow $bright-sun $emerald $medium-purple;
@@ -194,20 +180,6 @@
     .nav__link {
       height: 30px;
       font-size: 20px;
-    }
-
-    .sticky {
-      .navigation {
-        position: relative;
-      }
-
-      .nav__link {
-        color: #222 !important;
-      }
-
-      .social__icon {
-        fill: #222;
-      }
     }
   }
 </style>

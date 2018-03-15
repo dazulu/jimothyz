@@ -7,7 +7,7 @@
 
 <script>
   import Emote from '~/components/atoms/Emote.vue'
-  import Navigation from '~/components/molecules/Navigation.vue'
+  import Navigation from '~/components/organisms/Navigation.vue'
   
   export default {
     components: {
@@ -17,7 +17,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .header {
     height: 100px;
     display: flex;
