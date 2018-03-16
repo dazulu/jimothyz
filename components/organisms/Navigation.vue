@@ -2,13 +2,21 @@
   <div>
     <nav role="navigation">
       <ul class="nav">
-        <li class="nav__item"><a v-on:click="toAbout" class="nav__link" href="#">About</a></li>
-        <li class="nav__item"><a v-on:click="toFaq" class="nav__link" href="#">FAQ</a></li>
-        <li class="nav__item"><a v-on:click="toSchedule" class="nav__link" href="#">Schedule</a></li>
-        <li class="nav__item"><a v-on:click="toContact" class="nav__link" href="#">Contact</a></li>
+        <li class="nav__item">
+          <button v-on:click="toAbout" class="nav__link">About</button>
+        </li>
+        <li class="nav__item">
+          <button v-on:click="toFaq" class="nav__link">FAQ</button>
+        </li>
+        <li class="nav__item">
+          <button v-on:click="toSchedule" class="nav__link">Schedule</button>
+        </li>
+        <li class="nav__item">
+          <button v-on:click="toContact" class="nav__link">Contact</button>
+        </li>
       </ul>
     </nav>
-    <BurgerButton />
+    <burger-button />
   </div>
 </template>
 
@@ -102,6 +110,10 @@
 
   .nav__link {
     align-items: center;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
     color: $pure-white !important;
     display: flex;
     align-items: center;
@@ -109,9 +121,9 @@
     font-family: $font-family-heading;
     font-weight: 400;
     text-transform: uppercase;
-    text-decoration: none;
     height: 100%;
     font-size: 4.2vh;
+    width: 100%;
   }
 
   .nav__item {
@@ -122,9 +134,9 @@
     transition: all 1s ease;
   }
 
-  @media (pointer: fine) and (min-width: 1024px){
+  @media only screen and (min-width: 1024px) {
     .nav__item {
-      $colors-list: $dodger-blue $sunglow $bright-sun $emerald $medium-purple;
+      $colors-list: $dodger-blue $sunglow $bright-sun $spring-rain $medium-purple;
       @for $i from 1 through length($colors-list) {
         &:nth-child(#{$i}) {
           &::after {
@@ -180,6 +192,7 @@
     .nav__link {
       height: 30px;
       font-size: 20px;
+      width: auto;
     }
   }
 </style>
