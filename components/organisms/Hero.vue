@@ -17,8 +17,8 @@
   .logo {
     position: relative;
     top: -20%;
-    max-width: 400px;
+    max-width: 450px;
     min-width: 290px;
-    width: 50vw;
+    width: 100%;
   }
 </style>
