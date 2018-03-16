@@ -3,8 +3,8 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 const CLIENT_ID = process.env.TWITCH_CLIENT_ID
+const CHANNEL_NAME = process.env.TWITCH_USERNAME
 const API_URL = 'https://api.twitch.tv/kraken'
-const CHANNEL_NAME = 'jimothyz'
 const ENDPOINT_STREAM = 'streams'
 const ENDPOINT_CHANNEL = 'channels'
 const ENDPOINT_GAMES = 'search/games'
