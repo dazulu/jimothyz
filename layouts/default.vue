@@ -15,6 +15,8 @@
       GlobalFooter
     }
   }
-
-  console.log('>>>>>>> Site designed and coded by @dazulu <<<<<<<')
+  
+  if (process.browser) {
+    console.log('>>>>>>> Site designed and coded by @dazulu <<<<<<<')
+  }
 </script>

@@ -28,6 +28,7 @@
 
       <global-footer />
       <back-to-top />
+      <audio-player />
   </section>
 </template>
 
@@ -40,6 +41,7 @@
   import Faq from '~/components/organisms/Faq.vue'
   import GlobalFooter from '~/components/organisms/GlobalFooter.vue'
   import BackToTop from '~/components/atoms/BackToTop.vue'
+  import AudioPlayer from '~/components/atoms/Audio.vue'
 
   export default {
     components: {
@@ -50,7 +52,8 @@
       Schedule,
       Faq,
       GlobalFooter,
-      BackToTop
+      BackToTop,
+      AudioPlayer
     }
   }
 </script>
