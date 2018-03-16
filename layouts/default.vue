@@ -15,4 +15,6 @@
       GlobalFooter
     }
   }
+
+  console.log('>>>>>>> Site designed and coded by @dazulu <<<<<<<')
 </script>
