@@ -1,5 +1,7 @@
 <template>
-  <div class="image-banner" :class="image"></div>
+  <div class="image-banner">
+    <img class="image" :src=imageSrc :alt=alt />
+  </div>
 </template>
 
 <script>
@@ -7,41 +9,44 @@
     props: {
       image: {
         type: String
+      },
+      placeholder: {
+        type: String
+      },
+      alt: {
+        type: String
       }
+    },
+    data: function () {
+      return {
+        imageSrc: this.placeholder
+      }
+    },
+    mounted: function () {
+      var img, that
+      img = new Image()
+      that = this
+      img.onload = function () {
+        that.imageSrc = that.image
+      }
+      img.src = this.image
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .image-banner {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     height: 700px;
+    position: relative;
+    overflow: hidden;
   }
 
-  .keyboard {
-    background-image: url('~/static/images/bg-keyboard.jpg');
-  }
-
-  .corgi {
-    background-image: url('~/static/images/bg-corgi.jpg');
-  }
-
-  .pubg {
-    background-image: url('~/static/images/pubg-small.jpg');
-  }
-
-  
-  @media only screen and (min-width: 1024px) {
-    .pubg {
-      background-image: url('~/static/images/pubg-medium.jpg');
-    }
-  }
-
-  @media only screen and (min-width: 1280px) {
-    .pubg {
-      background-image: url('~/static/images/pubg-large.jpg');
-    }
+  .image {
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
 </style>

@@ -8,19 +8,31 @@
         </div>
       </div>
 
-      <image-banner image="keyboard" />
+      <image-banner
+        image="/images/bg-keyboard.jpg"
+        placeholder="/images/bg-keyboard-placeholder.jpg"
+        alt="rainbow backlit gaming keyboard"
+      />
 
       <div class="section section--white angle-bottom angle-top">
         <about />
       </div>
 
-      <image-banner image="pubg" />
+      <image-banner
+        image="/images/bg-pubg.jpg"
+        placeholder="/images/bg-pubg-placeholder.jpg"
+        alt="PlayerUnknown's: Battlegrounds screenshot"
+      />
 
       <div class="section section--blue angle-bottom angle-top">
         <faq />
       </div>
 
-      <image-banner image="corgi" />
+      <image-banner
+        image="/images/bg-corgi.jpg"
+        placeholder="/images/bg-corgi-placeholder.jpg"
+        alt="a corgi dog"
+      />
 
       <div class="section section--white angle-top">
         <schedule />
