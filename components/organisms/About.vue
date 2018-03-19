@@ -111,7 +111,8 @@
 
   @media only screen and (max-width: 600px) {
     .streamer-photo {
-      width: 320px;
+      max-width: 320px;
+      width: 100%;
     }
   }
 </style>
