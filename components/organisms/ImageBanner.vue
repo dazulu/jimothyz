@@ -23,13 +23,12 @@
       }
     },
     mounted: function () {
-      var img, that
-      img = new Image()
-      that = this
-      img.onload = function () {
-        that.imageSrc = that.image
+      let imageLoader = new Image()
+      imageLoader.onload = () => {
+        this.imageSrc = this.image
+        imageLoader = null
       }
-      img.src = this.image
+      imageLoader.src = this.image
     }
   }
 </script>
