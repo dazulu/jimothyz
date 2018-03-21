@@ -2,7 +2,7 @@
   <div class="contain">
     <h1 id="schedule" class="section__title">Stream Schedule</h1>
     <div class="schedule-wrapper">
-      <img src="~/static/images/temp-schedule.jpg" class="schedule"/>
+      <img src="~/static/images/temp-schedule.jpg" class="schedule" alt="stream schedule" />
     </div>
   </div>
 </template>

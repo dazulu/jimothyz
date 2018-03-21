@@ -19,12 +19,12 @@
           </p>
 
           <p class="viewers">
-            <img class="icon icon-followers" src="/images/heart.svg" />
+            <img class="icon icon-followers" src="/images/heart.svg" role="presentation"  alt="followers" />
             {{followers}}
-            <img class="icon icon-views" src="/images/eye.svg" />
+            <img class="icon icon-views" src="/images/eye.svg" role="presentation" alt="views" />
             {{views}}
             <span v-if="online">
-              <img class="icon icon-viewers" src="/images/viewers.svg" />
+              <img class="icon icon-viewers" src="/images/viewers.svg" role="presentation" alt="viewers" />
               {{viewers}}
             </span>
           </p>
