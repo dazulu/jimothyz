@@ -9,7 +9,7 @@
 
         <div class="column-content">
           <div>
-            <p class="copy">I'm Jimothy/James, a 25-year-old community manager for Ubisoft (For Honor, BGE2) and lover of music, movies, dogs and obscure Lil Pump memes. This is a variety stream -- meaning we play anything and everything -- but community always comes first. I stream 6 days a week and am a proud member of Team Sin Squad. Grab yourself a coffee and join the ride!</p>
+            <p class="copy">I'm Jimothy/James, a {{getAge()}}-year-old community manager for Ubisoft (For Honor, BGE2) and lover of music, movies, dogs and obscure Lil Pump memes. This is a variety stream -- meaning we play anything and everything -- but community always comes first. I stream 6 days a week and am a proud member of Team Sin Squad. Grab yourself a coffee and join the ride!</p>
             <p class="copy social">
               <a
                 target="_blank"
@@ -48,6 +48,18 @@
 
   </div>
 </template>
+
+<script>
+import moment from 'moment'
+
+export default {
+  methods: {
+    getAge () {
+      return moment().diff('1992-04-08', 'years')
+    }
+  }
+}
+</script>
 
 <style lang="scss">
   .social {

@@ -63,7 +63,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: [],
+    vendor: [
+      'moment'
+    ],
     postcss: [
       require('postcss-cssnext')()
     ],
