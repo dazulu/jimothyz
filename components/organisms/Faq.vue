@@ -35,6 +35,7 @@
             <li class="copy"><a class="list-link" href="https://www.amazon.com/Audio-Technica-ATH-M50x-Professional-Monitor-Headphones/dp/B00HVLUR86?tag=jimothyz-20&sigts=1522602369768&sig=b1d13542511f7137f71db87ad36199822c471ab3&adId=B00HVLUR86&linkCode=tw1&ref=TA_GL_POS_6&ref-refURL=https://taos-na-prod.amazon.com/viewer&imprToken=a192e0f5-b4a0-450f-85e1-c75ae3dd595c">Audio-Technica ATH-M50x Headphones</a></li>
             <li class="copy"><a class="list-link" href="https://www.amazon.com/Behringer-502-BEHRINGER-XENYX/dp/B000J5UEGQ?tag=jimothyz-20&sigts=1522602369768&sig=6ab5e7d41d310ac93fb035cce07d462c7e2ac79b&adId=B000J5UEGQ&linkCode=tw1&ref=TA_GL_POS_5&ref-refURL=https://taos-na-prod.amazon.com/viewer&imprToken=0d6732af-5abf-4a7b-b227-d81d09c4df10"> BEHRINGER XENYX 502 Audio Mixer</a></li>
             <li class="copy"><a class="list-link" href="https://www.amazon.com/Logitech-Widescreen-Calling-Recording-Desktop/dp/B006JH8T3S?tag=jimothyz-20&sigts=1522602369768&sig=5db547995aafd44fd2b71e3f0fb68318772ec5f9&adId=B006JH8T3S&linkCode=tw1&ref=TA_GL_POS_9&ref-refURL=https://taos-na-prod.amazon.com/viewer&imprToken=62164e54-6f1a-4d00-a3c6-cfa1512f1f5b">Logitech HD Pro Webcam C920 webcam</a></li>
+            <li class="copy"><a class="list-link" href="https://www.amazon.com/Elgato-Game-Capture-HD60-1GC119901001/dp/B01LYON4FJ/ref=sr_1_1_sspa?s=electronics&ie=UTF8&qid=1522609013&sr=1-1-spons&keywords=Elgato+HD60&psc=1">Elgato Game Capture HD60</a></li>
           </ul>
         </p>
       </div>
