@@ -34,7 +34,7 @@ module.exports = {
       { name: "google-site-verification", content: "tbd" },
       { property: "og:title", content: "Jimothy - Twitch Streamer" },
       { property: "og:description", content: "I'm a variety streamer -- meaning we play anything and everything -- but community always comes first." },
-      { property: "og:image", content: "~/static/images/og-image.jpg" },
+      { property: "og:image", content: "/images/og-image.jpg" },
       { property: "og:url", content: "tbd" },
       { property: "og:type", content: "website" }
     ],
