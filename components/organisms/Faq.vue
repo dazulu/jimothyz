@@ -28,7 +28,7 @@
         </p>
       </div>
       <div>
-        <h3 class="grid-item-title">What are your PC specs?</h3>
+        <h3 class="grid-item-title">What's your streaming hardware?</h3>
         <p class="copy">
           <ul>
             <li class="copy"><a class="list-link" href="https://www.amazon.com/Audio-Technica-AT2020-Cardioid-Condenser-Microphone/dp/B0006H92QK?tag=jimothyz-20&sigts=1522602369768&sig=7b370668b6968f003aeda51de6536897f8fc2bd8&adId=B0006H92QK&linkCode=tw1&ref=TA_GL_POS_4&ref-refURL=https://taos-na-prod.amazon.com/viewer&imprToken=84a71d96-5941-4602-82dc-da0c51abc5c4">Audio-Technica AT2020 Condenser Mic</a></li>
