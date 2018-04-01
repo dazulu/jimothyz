@@ -31,11 +31,11 @@ module.exports = {
         name: "description",
         content: "I'm a variety streamer -- meaning we play anything and everything -- but community always comes first."
       },
-      { name: "google-site-verification", content: "tbd" },
+      { name: "google-site-verification", content: "no" },
       { property: "og:title", content: "Jimothy - Twitch Streamer" },
-      { property: "og:description", content: "I'm a variety streamer -- meaning we play anything and everything -- but community always comes first." },
+      { property: "og:description", content: "I'm a variety streamer - meaning we play anything and everything - but community always comes first." },
       { property: "og:image", content: "/images/og-image.jpg" },
-      { property: "og:url", content: "tbd" },
+      { property: "og:url", content: "http://www.jimothy.tv/" },
       { property: "og:type", content: "website" }
     ],
     link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
