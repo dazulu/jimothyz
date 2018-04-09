@@ -10,15 +10,16 @@
         <div class="column-content">
           <div>
             <p class="copy">The curious and (often) accurate schedule of what Jim's planning to Stream for the coming week.</p>
-            <h2 class="sub-title">Week 14 - 2nd April 2018</h2>
-            <ul class="sched-list">
+            <h2 class="sub-title">No strim this week</h2>
+            <p class="copy">Jim's away in 🇨🇦 Canada, finding his inner moose! Regular television schedule will resume from Sunday 15th.</p>
+            <!--<ul class="sched-list">
               <li><strong class="day">Monday</strong> - Dark Souls 3</li>
               <li><strong class="day">Tuesday</strong> - Bloodborne</li>
               <li><strong class="day">Wednesday </strong> - <em>OFF</em></li>
               <li><strong class="day">Thursday</strong> - PUBG + Tunes</li>
               <li><strong class="day">Friday</strong> - <em>OFF</em></li>
-              <li><strong class="day">Saturday</strong> - Birthday Stream! 🎂</li>
-            </ul>
+              <li><strong class="day">Saturday</strong> - Birthday Stream!</li>
+            </ul>-->
           </div>
         </div>
 
