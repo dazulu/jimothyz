@@ -18,7 +18,7 @@
               <li><strong class="day">Wednesday </strong> - NIOH</li>
               <li><strong class="day">Thursday</strong> - <em>CLUBG</em>! Bangers &amp; PUBG</li>
               <li><strong class="day">Friday</strong> - Bloodborne</li>
-              <li><strong class="day">Saturday</strong> - Scary Game (w/guests?)</li>
+              <li><strong class="day">Sunday</strong> - The Walking Dead S2E1</li>
             </ul>
           </div>
         </div>
