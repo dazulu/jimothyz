@@ -11,14 +11,15 @@
         <div class="column-content">
           <div>
             <p class="copy">The curious and (often) accurate schedule of what Jim's planning to Stream for the coming week.</p>
-            <h2 class="sub-title">Week 16th - 21st April 2018</h2>
+            <h2 class="sub-title">Week of the 23rd - 29th April 2018. Live at 7pm.</h2>
             <ul class="sched-list">
-              <li><strong class="day">Monday</strong> - NIOH</li>
-              <li><strong class="day">Tuesday</strong> - NIOH</li>
-              <li><strong class="day">Wednesday </strong> - NIOH</li>
-              <li><strong class="day">Thursday</strong> - <em>CLUBG</em>! Bangers &amp; PUBG</li>
-              <li><strong class="day">Friday</strong> - Bloodborne</li>
-              <li><strong class="day">Sunday</strong> - The Walking Dead S2E1</li>
+              <li><strong class="day">Monday</strong> - Dad of War</li>
+              <li><strong class="day">Tuesday</strong> - Dad of War</li>
+              <li><strong class="day">Wednesday</strong> NOPE</li>
+              <li><strong class="day">Thursday</strong> - <em>CLUBG</em></li>
+              <li><strong class="day">Friday</strong> - NOPE</li>
+              <li><strong class="day">Saturday</strong> - A Way Out (feat. Skowalz)</li>
+              <li><strong class="day">Sunday</strong> - TBD</li>
             </ul>
           </div>
         </div>
