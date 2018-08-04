@@ -4,6 +4,8 @@ import axios from 'axios'
 
 const CLIENT_ID = process.env.TWITCH_CLIENT_ID
 const CHANNEL_NAME = process.env.TWITCH_USERNAME
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
+const GOOGLE_SHEET_ID = process.env.GOOGLE_SHEET_ID
 const API_URL = 'https://api.twitch.tv/kraken'
 const ENDPOINT_STREAM = 'streams'
 const ENDPOINT_CHANNEL = 'channels'
@@ -12,7 +14,7 @@ const ENDPOINT_GAMES = 'search/games'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      channel : {}
+      channel : {},
     },
     mutations: {
       SET_CHANNEL_DATA (state, data) {
@@ -82,6 +84,19 @@ const createStore = () => {
             payload.boxArt = gameResponse.data.games[0].box.large
           }
         }
+
+        const schedule = await axios.get(
+          `https://sheets.googleapis.com/v4/spreadsheets/${GOOGLE_SHEET_ID}/values/stream_schedule?key=${GOOGLE_API_KEY}`
+        )
+        .then(response => {
+          console.log('SUCKCESS')
+          return response.data.values
+        })
+        .catch(error => {
+          console.log(error.response)
+        })
+
+        payload.schedule = schedule || [];
 
         commit('SET_CHANNEL_DATA', { ...payload })
       }

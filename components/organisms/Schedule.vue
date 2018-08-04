@@ -11,15 +11,15 @@
         <div class="column-content">
           <div>
             <p class="copy">The curious and (often) accurate schedule of what Jim's planning to Stream for the coming week.</p>
-            <h2 class="sub-title">Week of the 23rd - 29th April 2018. Live at 7pm.</h2>
+            <h2 class="sub-title">{{date}}</h2>
             <ul class="sched-list">
-              <li><strong class="day">Monday</strong> - Dad of War</li>
-              <li><strong class="day">Tuesday</strong> - Dad of War</li>
-              <li><strong class="day">Wednesday</strong> NOPE</li>
-              <li><strong class="day">Thursday</strong> - <em>CLUBG</em></li>
-              <li><strong class="day">Friday</strong> - NOPE</li>
-              <li><strong class="day">Saturday</strong> - A Way Out (feat. Skowalz)</li>
-              <li><strong class="day">Sunday</strong> - TBD</li>
+              <li :key="index" v-for="(item, index) in schedule">
+                <p>
+                  <strong class="day">{{item[0]}}</strong>
+                  <span v-if="item[1]">{{item[1]}} - {{item[2]}}</span>
+                  <em v-else>no stream</em>
+                </p>
+              </li>
             </ul>
           </div>
         </div>
@@ -28,6 +28,26 @@
 
   </div>
 </template>
+
+<script>
+  import moment from 'moment'
+
+  // Set start day of the week to Monday
+  moment.updateLocale('en', {
+    week: {
+      dow: 1
+    }
+  })
+
+  export default {
+    computed: {
+      schedule () { return this.$store.state.channel.schedule },
+      date () {
+        return `Week of the ${moment().startOf('week').format('Do')} to the ${moment().endOf('week').format('Do')} of ${moment().format('MMMM')}`
+      }
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
   .sub-title {
@@ -55,6 +75,7 @@
   .day {
     font-family: $font-family-heading;
     font-weight: 400;
+    margin-right: 10px;
   }
 
   .schedule-wrapper {
