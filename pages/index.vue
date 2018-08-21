@@ -19,9 +19,9 @@
       </div>
 
       <image-banner
-        image="/images/bg-pubg.jpg"
-        placeholder="/images/bg-pubg-placeholder.jpg"
-        alt="PlayerUnknown's: Battlegrounds screenshot"
+        image="/images/bg-wow.jpg"
+        placeholder="/images/bg-wow-placeholder.jpg"
+        alt="World of Warcraft: Battle for Azeroth"
       />
 
       <div class="section section--blue angle-bottom angle-top">
@@ -44,56 +44,60 @@
 </template>
 
 <script>
-  import Hero from '~/components/organisms/Hero.vue'
-  import Stream from '~/components/organisms/Stream.vue'
-  import ImageBanner from '~/components/organisms/ImageBanner.vue'
-  import About from '~/components/organisms/About.vue'
-  import Schedule from '~/components/organisms/Schedule.vue'
-  import Faq from '~/components/organisms/Faq.vue'
-  import GlobalFooter from '~/components/organisms/GlobalFooter.vue'
-  import BackToTop from '~/components/atoms/BackToTop.vue'
+import Hero from "~/components/organisms/Hero.vue";
+import Stream from "~/components/organisms/Stream.vue";
+import ImageBanner from "~/components/organisms/ImageBanner.vue";
+import About from "~/components/organisms/About.vue";
+import Schedule from "~/components/organisms/Schedule.vue";
+import Faq from "~/components/organisms/Faq.vue";
+import GlobalFooter from "~/components/organisms/GlobalFooter.vue";
+import BackToTop from "~/components/atoms/BackToTop.vue";
 
-  export default {
-    components: {
-      Hero,
-      Stream,
-      ImageBanner,
-      About,
-      Schedule,
-      Faq,
-      GlobalFooter,
-      BackToTop
-    },
-    mounted: function () {
-      this.$nextTick(function () {
-        initAudioListener()
-      })
-    }
+export default {
+  components: {
+    Hero,
+    Stream,
+    ImageBanner,
+    About,
+    Schedule,
+    Faq,
+    GlobalFooter,
+    BackToTop
+  },
+  mounted: function() {
+    this.$nextTick(function() {
+      initAudioListener();
+    });
   }
+};
 
-  const initAudioListener = () => {
-    const secretCode = '66,76,69,83,83,84,72,69,82,65,73,78,83'
+const initAudioListener = () => {
+  const secretCode = "66,76,69,83,83,84,72,69,82,65,73,78,83";
 
-    let capturedKeys = []
-    let audioElement = document.createElement('audio')
+  let capturedKeys = [];
+  let audioElement = document.createElement("audio");
 
-    audioElement.id = 'audio'
-    audioElement.className = 'audio-player'
-    audioElement.preload = 'auto'
-    audioElement.controls = 'controls'
-    audioElement.src = '/audio.mp3'
-    audioElement.type = 'audio/mpeg'
-    audioElement.volume = 0.5 // let's not deafen people
+  audioElement.id = "audio";
+  audioElement.className = "audio-player";
+  audioElement.preload = "auto";
+  audioElement.controls = "controls";
+  audioElement.src = "/audio.mp3";
+  audioElement.type = "audio/mpeg";
+  audioElement.volume = 0.5; // let's not deafen people
 
-    audioElement.load()
+  audioElement.load();
 
-    window.addEventListener('keydown', (e) => {
-      capturedKeys.push(e.keyCode)
+  window.addEventListener(
+    "keydown",
+    e => {
+      capturedKeys.push(e.keyCode);
 
       if (capturedKeys.toString().indexOf(secretCode) >= 0) {
-        audioElement.play()
-        capturedKeys = []
+        audioElement.play();
+        capturedKeys = [];
       }
-    }, true)
-  }
+    },
+    true
+  );
+};
 </script>
