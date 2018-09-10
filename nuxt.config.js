@@ -39,7 +39,7 @@ module.exports = {
       { property: "og:url", content: "https://www.jimothy.tv/" },
       { property: "og:type", content: "website" }
     ],
-    link: [{ rel: "icon", type: "image/png", href: "//favicon.png" }]
+    link: [{ rel: "icon", type: "image/png", href: "https://www.jimothy.tv/favicon.png" }]
   },
   /*
   ** Shared CSS rules
