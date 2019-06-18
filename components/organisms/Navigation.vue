@@ -3,16 +3,13 @@
     <nav role="navigation">
       <ul class="nav">
         <li class="nav__item">
+          <button v-on:click="toStream" class="nav__link">Stream</button>
+        </li>
+        <li class="nav__item">
           <button v-on:click="toAbout" class="nav__link">About</button>
         </li>
         <li class="nav__item">
           <button v-on:click="toFaq" class="nav__link">FAQ</button>
-        </li>
-        <li class="nav__item">
-          <button v-on:click="toSchedule" class="nav__link">Schedule</button>
-        </li>
-        <li class="nav__item">
-          <button v-on:click="toContact" class="nav__link">Contact</button>
         </li>
       </ul>
     </nav>
@@ -56,17 +53,14 @@
       BurgerButton
     },
     methods: {
+      toStream: () => {
+        scroll('#stream', { ...jumpParams })
+      },
       toAbout: () => {
         scroll('#about', { ...jumpParams })
       },
       toFaq: () => {
         scroll('#faq', { ...jumpParams })
-      },
-      toSchedule: () => {
-        scroll('#schedule', { ...jumpParams })
-      },
-      toContact: () => {
-        scroll('#contact', { ...jumpParams })
       }
     }
   }

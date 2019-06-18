@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="stream__wrapper">
+    <div id="stream" class="stream__wrapper">
       <div>
         <a :href=url rel=noopener>
           <img src="~/static/images/twitch-logo.svg" alt="Twitch logo" class="twitch-logo" />
