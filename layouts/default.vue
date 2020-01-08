@@ -1,20 +1,20 @@
 <template>
   <div class="view">
     <GlobalHeader />
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 
 <script>
-  import GlobalHeader from '~/components/organisms/GlobalHeader.vue'
+import GlobalHeader from "~/components/organisms/GlobalHeader.vue";
 
-  export default {
-    components: {
-      GlobalHeader
-    }
+export default {
+  components: {
+    GlobalHeader
   }
-  
-  if (process.browser) {
-    console.log('>>>>>>> Site designed and coded by @dazulu <<<<<<<')
-  }
+};
+
+if (process.browser) {
+  console.log(">>> Site designed and coded by @IrishBeets <<<");
+}
 </script>
