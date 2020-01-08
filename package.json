@@ -14,7 +14,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.18.1",
     "jump.js": "^1.0.2",
     "moment": "^2.22.0",
     "nuxt": "^1.4.0"
