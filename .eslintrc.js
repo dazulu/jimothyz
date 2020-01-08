@@ -10,7 +10,7 @@ module.exports = {
   plugins: ['html'],
   // add your custom rules here
   rules: {
-    'no-extra-semi': true
+    'no-extra-semi': 1
   },
   globals: {}
 }
