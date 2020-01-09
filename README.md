@@ -14,7 +14,10 @@ $ npm run dev
 # build for production and launch server
 $ npm run build
 $ npm start
-
-# generate static project
-$ npm run generate
 ```
+
+## Requirements
+### Environment Variables
+`TWITCH_CLIENT_ID` - Obtained by registering your application on the Twitch developer portal.
+
+`TWITCH_CHANNEL_ID` - The ID of the channel to request data for.
