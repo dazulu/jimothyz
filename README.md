@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b7743955-4882-4b29-b9c4-61edaffd64e7/deploy-status)](https://app.netlify.com/sites/jimothyz/deploys)
 # jimothyz
 
 > Twitch streamer website in development
