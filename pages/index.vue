@@ -19,9 +19,9 @@
     </div>
 
     <image-banner
-      image="/images/bg-pubg.jpg"
-      placeholder="/images/bg-pubg-placeholder.jpg"
-      alt="PLAYERUNKNOWN: Battlegrounds"
+      image="/images/bg-bloodborne.jpg"
+      placeholder="/images/bg-bloodborne-placeholder.jpg"
+      alt="Bloodborne"
     />
 
     <div class="section section--blue angle-bottom angle-top">
