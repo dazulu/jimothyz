@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import GlobalHeader from "~/components/organisms/GlobalHeader.vue";
+import GlobalHeader from '~/components/organisms/GlobalHeader.vue'
 
 export default {
   components: {
     GlobalHeader
   }
-};
+}
 
 if (process.browser) {
-  console.log(">>> Site designed and coded by @IrishBeets <<<");
+  console.log('>>> Site designed and coded by @IrishBeets <<<')
 }
 </script>
