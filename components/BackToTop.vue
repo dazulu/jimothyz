@@ -70,7 +70,7 @@ export default {
 .back-to-top {
   border: 3px solid $pure-white;
   border-radius: 20px;
-  background: $curious-blue;
+  background: $dark-blue;
   cursor: pointer;
   position: fixed;
   bottom: $padding;
