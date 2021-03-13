@@ -1,6 +1,6 @@
 <template>
   <div class="contain">
-    <h1 id="faq" class="section__title">Frequently Asked Questions</h1>
+    <h2 id="faq" class="section__title">Frequently Asked Questions</h2>
     <div class="grid">
       <div>
         <h3 class="grid-item-title">Where are you from?</h3>

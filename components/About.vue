@@ -1,6 +1,6 @@
 <template>
   <div class="contain">
-    <h1 id="about" class="section__title">About Jimothy</h1>
+    <h1 id="about" class="section__title">Jimothy Streamer</h1>
 
     <div class="two-column-content">
       <div class="column-content">
