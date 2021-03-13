@@ -8,6 +8,8 @@
           src="~/static/images/jim.png"
           alt="Jimothy"
           class="streamer-photo"
+          width="400"
+          height="400"
         />
       </div>
 
@@ -138,8 +140,8 @@
 
 @media only screen and (max-width: 600px) {
   .streamer-photo {
-    max-width: 320px;
-    width: 100%;
+    max-width: 280px;
+    height: auto;
   }
 }
 </style>

@@ -1,6 +1,12 @@
 <template>
   <div class="hero">
-    <img class="logo" src="~/static/images/logo.png" alt="Jimothyz" />
+    <img
+      class="logo"
+      src="~/static/images/logo.png"
+      alt="Jimothyz"
+      width="648"
+      height="351"
+    />
   </div>
 </template>
 
@@ -20,5 +26,6 @@
   max-width: 450px;
   min-width: 290px;
   width: 100%;
+  height: auto;
 }
 </style>

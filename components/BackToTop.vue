@@ -43,7 +43,7 @@ export default {
 
     toggleBackToTopButton()
 
-    document.addEventListener('scroll', function (e) {
+    document.addEventListener('scroll', function () {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           toggleBackToTopButton()

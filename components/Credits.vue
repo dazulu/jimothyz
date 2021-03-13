@@ -32,6 +32,8 @@
             src="/images/glitch.png"
             class="social__icon glitch__icon"
             alt="Twitch glitch logo"
+            width="25"
+            height="25"
           />
           Twitch
         </a>

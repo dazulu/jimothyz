@@ -7,6 +7,8 @@
             src="~/static/images/twitch-logo.svg"
             alt="Twitch logo"
             class="twitch-logo"
+            width="150"
+            height="50"
           />
         </a>
 
@@ -34,6 +36,8 @@
               src="/images/heart.svg"
               role="presentation"
               alt="followers"
+              width="25"
+              height="25"
             />
             {{ stream.followers }}
             <img
@@ -41,6 +45,8 @@
               src="/images/eye.svg"
               role="presentation"
               alt="views"
+              width="28"
+              height="28"
             />
             {{ stream.views }}
             <span v-if="stream.online">
@@ -49,6 +55,8 @@
                 src="/images/viewers.svg"
                 role="presentation"
                 alt="viewers"
+                width="31"
+                height="28"
               />
               {{ stream.viewers }}
             </span>
@@ -58,7 +66,12 @@
       <div class="box-art-container">
         <div class="box-art">
           <a :href="stream.url" rel="noopener">
-            <img :src="stream.boxArt" :alt="'Box art for ' + stream.game" />
+            <img
+              :src="stream.boxArt"
+              :alt="'Box art for ' + stream.game"
+              width="272"
+              height="380"
+            />
           </a>
         </div>
       </div>
@@ -96,6 +109,7 @@ export default {
 .twitch-logo {
   margin-bottom: 25px;
   width: 100px;
+  height: auto;
 }
 
 .status {
@@ -124,20 +138,23 @@ export default {
   position: relative;
   top: 3px;
   margin-left: 10px;
-  height: 28px;
+  width: 31px;
+  height: auto;
 }
 
 .icon-views {
   position: relative;
   top: 3px;
   margin-left: 10px;
+  width: 28px;
   height: 28px;
 }
 
 .icon-followers {
   position: relative;
   top: 2px;
-  height: 25px;
+  width: 25px;
+  height: auto;
 }
 
 .box-art {
@@ -149,6 +166,7 @@ export default {
 
   img {
     width: 240px;
+    height: auto;
     box-shadow: 14px 0 32px 0 rgba(0, 0, 0, 0.25);
     transform: rotateY(-15deg) translateY(-3px) rotateX(10deg);
     animation: hover 1.5s alternate infinite ease-in-out;
@@ -194,6 +212,7 @@ export default {
 
   .twitch-logo {
     width: 150px;
+    height: auto;
   }
 
   .box-art-container {
