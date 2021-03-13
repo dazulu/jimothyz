@@ -1,0 +1,18 @@
+.button {
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.20);
+  background: linear-gradient(to left bottom, #355a88, #4ebad2);
+  border-radius: 12px;
+  display: inline-block;
+  padding: 15px $padding;
+  font-family: $font-family-heading;
+  font-size: 22px;
+  font-weight: 400;
+  color: $pure-white;
+  text-decoration: none;
+  transition: all 140ms ease-in;
+
+  &:hover {
+    filter: saturate(1.2);
+    box-shadow: 0 7px 15px 0 rgba(0,0,0,0.30);
+  }
+}

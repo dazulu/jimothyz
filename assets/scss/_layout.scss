@@ -1,0 +1,99 @@
+.contain {
+  max-width: $site-constraint;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  position: relative;
+  padding: $padding;
+}
+
+.section--blue {
+  background-color: $curious-blue;
+
+  &::before,
+  &::after {
+    background-color: inherit;
+  }
+
+  h3,
+  .section__title,
+  .copy {
+    color: $pure-white;
+  }
+}
+
+.section--white {
+  background-color: $pure-white;
+
+  &::before,
+  &::after {
+    background-color: inherit;
+  }
+
+  h3,
+  .section__title,
+  .copy {
+    color: $color-copy;
+  }
+}
+
+.angle-top {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 200px;
+    z-index: 0;
+    top: -100px;
+    transform: skewY(-3deg);
+  }
+}
+
+.angle-bottom {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 200px;
+    z-index: 0;
+    bottom: -100px;
+    transform: skewY(3deg);
+  }
+}
+
+.two-column-content {
+  > div:first-child {
+    margin-bottom: $padding * 2;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .two-column-content {
+    display: flex;
+
+    > div {
+      flex: 1;
+      display: flex;
+
+      &:first-child {
+        justify-content: right;
+        padding-right: 5%;
+      }
+
+      &:last-child {
+        justify-content: left;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+  }
+}
