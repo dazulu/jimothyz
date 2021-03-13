@@ -78,7 +78,14 @@
     </div>
 
     <div class="button-wrapper">
-      <a :href="stream.url" class="button" rel="noopener"> GO TO STREAM </a>
+      <a
+        :href="stream.url"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GO TO STREAM
+      </a>
     </div>
   </div>
 </template>
