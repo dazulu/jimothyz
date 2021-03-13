@@ -16,6 +16,7 @@
 
     <div class="section section--white angle-bottom angle-top">
       <about />
+      <videos />
     </div>
 
     <image-banner
@@ -49,6 +50,7 @@ import Stream from '@/components/Stream.vue'
 import ImageBanner from '@/components/ImageBanner.vue'
 import Credits from '@/components/Credits.vue'
 import About from '@/components/About.vue'
+import Videos from '@/components/Videos.vue'
 import Faq from '@/components/Faq.vue'
 import BackToTop from '@/components/BackToTop.vue'
 
@@ -58,11 +60,12 @@ export default {
     Stream,
     ImageBanner,
     About,
+    Videos,
     Faq,
     Credits,
     BackToTop,
   },
-  middleware: ['stream'],
+  middleware: ['stream', 'youtube'],
   mounted() {
     this.$nextTick(function () {
       initAudioListener()
@@ -96,7 +99,7 @@ const initAudioListener = () => {
         capturedKeys = []
       }
     },
-    true,
+    true
   )
 }
 </script>
