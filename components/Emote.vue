@@ -4,6 +4,8 @@
     src="~/static/images/jimCool.png"
     alt="Jimothyz"
     role="presentation"
+    width="80"
+    height="70"
   />
 </template>
 
@@ -11,6 +13,7 @@
 .emote {
   display: inline-block;
   padding-right: 10px;
-  height: 70%;
+  width: 80px;
+  height: auto;
 }
 </style>
