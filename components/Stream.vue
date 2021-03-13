@@ -39,7 +39,7 @@
               width="25"
               height="25"
             />
-            {{ stream.followers }}
+            {{ followers }}
             <img
               class="icon icon-views"
               src="/images/eye.svg"
@@ -48,7 +48,7 @@
               width="28"
               height="28"
             />
-            {{ stream.views }}
+            {{ views }}
             <span v-if="stream.online">
               <img
                 class="icon icon-viewers"
@@ -58,7 +58,7 @@
                 width="31"
                 height="28"
               />
-              {{ stream.viewers }}
+              {{ viewers }}
             </span>
           </p>
         </div>
@@ -90,7 +90,18 @@ export default {
       stream: {},
     }
   },
-  created() {
+  computed: {
+    views() {
+      return this.stream.views?.toLocaleString('en') || ''
+    },
+    viewers() {
+      return this.stream.viewers?.toLocaleString('en') || ''
+    },
+    followers() {
+      return this.stream.followers?.toLocaleString('en') || ''
+    },
+  },
+  mounted() {
     this.stream = this.$store.getters.stream
   },
 }

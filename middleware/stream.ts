@@ -27,7 +27,7 @@ const middleware: Middleware = async ({
 
   const streamResponse = await axios
     .get(
-      `${API_URL}/${ENDPOINT_STREAM}/${CHANNEL_ID}?client_id=${CLIENT_ID}&api_version=${TWITCH_API_VERSION}`,
+      `${API_URL}/${ENDPOINT_STREAM}/${CHANNEL_ID}?client_id=${CLIENT_ID}&api_version=${TWITCH_API_VERSION}`
     )
     .then((response) => {
       return response.data
@@ -52,7 +52,7 @@ const middleware: Middleware = async ({
   } else {
     const channelResponse = await axios
       .get(
-        `${API_URL}/${ENDPOINT_CHANNEL}/${CHANNEL_ID}?client_id=${CLIENT_ID}&api_version=${TWITCH_API_VERSION}`,
+        `${API_URL}/${ENDPOINT_CHANNEL}/${CHANNEL_ID}?client_id=${CLIENT_ID}&api_version=${TWITCH_API_VERSION}`
       )
       .then((response) => {
         return response.data
@@ -77,8 +77,8 @@ const middleware: Middleware = async ({
   if (data.game) {
     const gameResponse = await axios.get(
       `${API_URL}/${ENDPOINT_GAMES}?query=${encodeURIComponent(
-        data.game,
-      )}&type=suggest&client_id=${CLIENT_ID}&api_version=${TWITCH_API_VERSION}`,
+        data.game
+      )}&type=suggest&client_id=${CLIENT_ID}&api_version=${TWITCH_API_VERSION}`
     )
     if (
       gameResponse.data.games &&
