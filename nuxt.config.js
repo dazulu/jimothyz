@@ -7,6 +7,8 @@ export default {
     CLIENT_ID: process.env.CLIENT_ID,
     CHANNEL_ID: process.env.CHANNEL_ID,
     CHANNEL_NAME: process.env.CHANNEL_NAME,
+    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
+    YOUTUBE_CHANNEL_ID: process.env.YOUTUBE_CHANNEL_ID,
   },
 
   // Target: https://go.nuxtjs.dev/config-target
